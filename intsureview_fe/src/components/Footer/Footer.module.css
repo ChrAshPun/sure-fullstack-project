@@ -1,0 +1,71 @@
+@import '../../variables.css';
+
+.Footer {
+  text-align: center;
+  background-color: var(--primary-teal);
+  padding: 80px 100px 40px 100px;
+}
+
+.TopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.TopRow h1 h6 {
+  color: var(--white-teal);
+}
+
+.JobTrack, .PlatformFeatures, .Resources {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.JobTrack > h1, .PlatformFeatures > h2, .Resources > h2 {
+  color: #F4FFFF;
+  margin-bottom: 10px;
+}
+
+.JobTrack > p, .PlatformFeatures > p, .Resources > p {
+  color: var(--white-teal);
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.TopRowRightSide {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.BottomRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SocialMediaIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.SocialMediaIcons > img {
+  width: 20px;
+  height: 20px;
+}
+
+.Message {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white-teal);
+}

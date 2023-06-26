@@ -1,0 +1,11 @@
+@import '../../variables.css';
+
+.Header {
+  background-color: var(--navigation-teal);
+  padding: 16px 0;
+}
+
+.Section {
+  width: 1200px;
+  margin: 0 auto;
+}

@@ -1,0 +1,96 @@
+@import '../../variables.css';
+
+.Component {
+  width: 1080px;
+  background-color: var(--primary-white);
+  padding: 40px 20px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.Component > h1 {
+  margin-bottom: 30px;
+}
+
+.Table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Table thead {
+  border-bottom: solid 1px #C6C6C6;
+}
+
+.Table th {
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px 5px;
+}
+
+.DeleteDropDown {
+  width: 61px;
+  cursor: pointer;
+}
+
+.DeleteCheckbox {
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 6px;
+  margin: 0;
+}
+
+.DeleteCheckbox > input {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.TextAlignLeft {
+  text-align: left !important;
+}
+
+.Table td {
+  min-height: 60px;
+  text-align: center;
+  padding: 8px 5px;
+}
+
+.CheckIcon, .XMarkIcon {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.CheckIcon {
+  background-color: #3A9744;
+}
+
+.XMarkIcon {
+  background-color: var(--danger-red);
+}
+
+.CheckIcon > img, .XMarkIcon > img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
+.WebStackColumn {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.StackItem {
+  height: 32px;
+  background-color: #e2e2e2;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
