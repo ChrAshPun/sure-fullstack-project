@@ -38,7 +38,6 @@ const JobDataTable = ({ dataTable, updateDataTable }) => {
   }
 
   const deleteSelectedJobs = async () => {
-    console.log('attempting delete')
     await fetch('http://localhost:8000/jobs/delete/', {
       method: 'DELETE',
       headers: {

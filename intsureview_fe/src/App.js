@@ -41,8 +41,6 @@ function App() {
   },[])
 
   const addJob = (job) => {
-    console.log('job')
-    console.log(job)
     setDataTable(prevState => {
       // convert web_stack from string to array
       job.web_stack = job.web_stack.length > 0 ? job.web_stack.split(",") : []

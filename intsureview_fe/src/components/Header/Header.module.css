@@ -7,5 +7,21 @@
 
 .Section {
   width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 auto;
+}
+
+
+.Section > h1 {
+  margin-right: 20px;
+}
+
+.Section > a {
+  font-weight: 500;
+  color: var(--white-teal);
+  text-decoration: none;
+  cursor: pointer;
 }
