@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User, Group
-from rest_framework import viewsets, permissions, status
+from rest_framework import viewsets, status
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import RetrieveAPIView, ListAPIView, DestroyAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -15,7 +16,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     queryset = User.objects.all().order_by("-date_joined")
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'put', 'patch'] 
 
 
@@ -26,7 +27,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'put', 'patch'] 
 
 
@@ -37,7 +38,7 @@ class JobDetailView(RetrieveAPIView):
 
     queryset = Job.objects.all()
     serializer_class = JobSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['get']
 
 
@@ -48,7 +49,7 @@ class JobListView(ListAPIView):
 
     queryset = Job.objects.all().order_by("-date_applied")
     serializer_class = JobSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['get']
 
 
@@ -59,12 +60,12 @@ class JobDeleteView(DestroyAPIView):
 
     queryset = Job.objects.all()
     serializer_class = JobSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['delete']
 
 
 class JobAPIView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     http_method_names = ['post', 'delete']
 
     def post(self, request):
